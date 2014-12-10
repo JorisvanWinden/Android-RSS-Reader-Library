@@ -70,10 +70,15 @@ public class RssHandler extends DefaultHandler {
 				    method.invoke(rssFeed, stringBuilder.toString());
 				}
 			} catch (SecurityException e) {
+            e.printStackTrace();
 			} catch (NoSuchMethodException e) {
+            e.printStackTrace();
 			} catch (IllegalArgumentException e) {
+            e.printStackTrace();
 			} catch (IllegalAccessException e) {
+            e.printStackTrace();
 			} catch (InvocationTargetException e) {
+            e.printStackTrace();
 			}
 			
 		} else if (rssItem != null) {
@@ -86,10 +91,15 @@ public class RssHandler extends DefaultHandler {
 				Method method = rssItem.getClass().getMethod(methodName, String.class);
 				method.invoke(rssItem, stringBuilder.toString());
 			} catch (SecurityException e) {
+            e.printStackTrace();
 			} catch (NoSuchMethodException e) {
+            e.printStackTrace();
 			} catch (IllegalArgumentException e) {
+            e.printStackTrace();
 			} catch (IllegalAccessException e) {
+            e.printStackTrace();
 			} catch (InvocationTargetException e) {
+            e.printStackTrace();
 			}
 		}
 		
