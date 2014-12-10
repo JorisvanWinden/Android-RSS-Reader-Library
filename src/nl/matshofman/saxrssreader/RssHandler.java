@@ -47,7 +47,6 @@ public class RssHandler extends DefaultHandler {
 		
 		if(qName.equals("item") && rssFeed != null) {
 			rssItem = new RssItem();
-			rssItem.setFeed(rssFeed);
 			rssFeed.addRssItem(rssItem);
 		}
 	}
@@ -76,7 +75,7 @@ public class RssHandler extends DefaultHandler {
 			} catch (InvocationTargetException e) {
 			}
 			
-		} else if (rssItem != null) {
+		} else {
 			// Parse item properties
 			
 			try {
